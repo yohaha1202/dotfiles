@@ -1,0 +1,41 @@
+[user]
+	name = Phoebe Shih
+	email = yohaha1202@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+[color]
+        ui = auto
+[alias]
+	fp = fetch -p
+	#############
+        br = branch
+	brr = branch -r
+	#############
+        ci = commit
+        cim = commit -m
+	#############
+        co = checkout
+	cotb = checkout --track -b
+	#############
+        st = status
+	#############
+	df = diff
+	#############
+	cp = cherry-pick
+	#############
+	pl = pull
+	plr = pull --rebase
+	plo = pull origin
+	plro = pull --rebase origin
+	#############
+	ps = push
+	pso = push origin
+	psf = push --force-with-lease
+	psfo = push --force-with-lease origin
+	#############
+	rb = rebase
+	rbi = rebase -i
+	#############
+	re = reset
+	reh = reset --hard
+	rehh = reset --hard HEAD
