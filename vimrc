@@ -19,6 +19,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,6 +79,7 @@ set incsearch
 set ignorecase
 set smartcase
 set ignorecase
+map <F12> :TagbarToggle<CR>
 
 " encoding settings
 set encoding=utf-8
