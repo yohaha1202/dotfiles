@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$HOME/.composer/vendor/bin:~/bin:$PATH
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh

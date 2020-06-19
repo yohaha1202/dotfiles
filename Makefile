@@ -12,6 +12,7 @@ init:
 	ln -fs `pwd`/bash_profile $(HOME)/.bash_profile
 	ln -fs `pwd`/zshrc $(HOME)/.zshrc
 	vim +PluginInstall +qall
+	# :GoInstallBinaries
 
 update:
 	git pull

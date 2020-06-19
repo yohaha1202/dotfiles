@@ -19,6 +19,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
@@ -122,3 +123,21 @@ autocmd FileType pug setlocal commentstring=//-\ %s"
 " Syntastic
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
+
+" golang
+let g:go_bin_path = $HOME."/go/bin"
+let g:go_fmt_command = "goimports"
+let g:go_autodetect_gopath = 1
+let g:go_list_type = "quickfix"
+
+let g:go_version_warning = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_generate_tags = 1
+
+let g:godef_split=2
