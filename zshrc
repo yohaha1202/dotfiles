@@ -111,7 +111,6 @@ alias my="make deploy"
 
 alias today='today'
 alias todate='todate'
-alias irc='ssh irc.pixnet.tw -P222'
 
 function today() {
     d=$(date "+%F %s");
