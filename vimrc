@@ -45,7 +45,7 @@ set t_Co=256
 " hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
 
 syntax on
-colorscheme cobalt
+colorscheme janah
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
