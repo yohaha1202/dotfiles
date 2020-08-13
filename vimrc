@@ -20,7 +20,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'fatih/vim-go'
-Plugin 'majutsushi/tagbar'
+Plugin 'taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,7 +80,19 @@ set incsearch
 set ignorecase
 set smartcase
 set ignorecase
-map <F12> :TagbarToggle<CR>
+
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 0
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Auto_Open = 0
+let Tlist_Auto_Update = 1
+let Tlist_Hightlight_Tag_On_BufEnter = 1
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Compact_Format = 1
+map <C-t> :TlistToggle<CR>
+set tags=tags;
 
 " encoding settings
 set encoding=utf-8

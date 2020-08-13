@@ -11,6 +11,8 @@ init:
 	ln -fs `pwd`/vim $(HOME)/.vim
 	ln -fs `pwd`/bash_profile $(HOME)/.bash_profile
 	ln -fs `pwd`/zshrc $(HOME)/.zshrc
+	brew install ctags
+	brew install php-code-sniffer
 	vim +PluginInstall +qall
 	# :GoInstallBinaries
 
