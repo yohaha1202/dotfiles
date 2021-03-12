@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$HOME/.composer/vendor/bin:~/bin:$PATH
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# export GOPATH=$HOME/go
+# export GOROOT=/usr/local/go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -12,7 +12,17 @@ export ZSH=~/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="bira"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+POWERLEVEL9K_MODE=nerdfont-complete
+POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
+POWERLEVEL9K_VCS_GIT_ICON='\uf1d3'
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uf09b'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time time)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,22 +118,41 @@ alias vimupd="vim +PluginUpdate +qall"
 alias vimdel="vim +PluginClean +qall"
 alias comins="composer install"
 alias comupd="composer update"
-alias my="make deploy"
+alias tag="ctags -R"
+alias ls="ls -al"
+alias v="vagrant"
 
-alias today='today'
-alias todate='todate'
+# alias today='today'
+# alias todate='todate'
+alias e='exit'
 
 function today() {
     d=$(date "+%F %s");
     echo $d;
 }
 function todate() {
-    d=$(date --date="@$1" "+%F %T")
-    echo $d;
+    c1=$(echo '<?php $date = $_SERVER["argv"][1];echo date("Y-m-d H:i:s", $date); ?>' > ~/work/phpscript.php);
+    c2=$(php ~/work/phpscript.php $1);
+    echo $c2;
+    $(rm ~/work/phpscript.php);
 }
 function totime() {
     c1=$(echo '<?php $date = $_SERVER["argv"][1];echo strtotime($date); ?>' > ~/work/phpscript.php);
-    echo $c1;
     c2=$(php ~/work/phpscript.php $1);
     echo $c2;
+    $(rm ~/work/phpscript.php);
+}
+
+function to36() {
+    c1=$(echo '<?php $base10 = $_SERVER["argv"][1];echo base_convert($base10, 10, 36); ?>' > ~/work/phpscript.php);
+    c2=$(php ~/work/phpscript.php $1);
+    echo $c2;
+    $(rm ~/work/phpscript.php);
+}
+
+function to10() {
+    c1=$(echo '<?php $base36 = $_SERVER["argv"][1];echo base_convert($base36, 36, 10); ?>' > ~/work/phpscript.php);
+    c2=$(php ~/work/phpscript.php $1);
+    echo $c2;
+    $(rm ~/work/phpscript.php);
 }

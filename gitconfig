@@ -1,7 +1,15 @@
 [user]
-	name = Phoebe_Shih
+	name = Phoebe.shih
 	email = yohaha1202@gmail.com
 [core]
 	excludesfile = ~/.gitignore
+	whitespace = cr-at-eol
 [color]
     ui = auto
+[alias]
+    br = branch
+    co = checkout
+    st = status
+    od = push origin :
+    d = branch -D
+    cp = cherry-pick
